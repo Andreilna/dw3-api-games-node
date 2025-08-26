@@ -12,6 +12,21 @@ class gameService {
       console.log(error);
     }
   }
+  // Cadastrando registro do banco
+  async Create(title, year, genre, platform, price) {
+    try {
+      const newGame = new Game({
+        title,
+        year,
+        genre,
+        platform,
+        price,
+      });
+      await newGame.save();
+    } catch (error) {
+      console.log(error);
+    }
+  }
 }
 
 export default new gameService();
