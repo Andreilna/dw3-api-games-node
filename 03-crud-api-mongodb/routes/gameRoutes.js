@@ -8,6 +8,15 @@ import gameController from "../controllers/gameController.js";
 gameRoutes.get("/games", gameController.getAllgames);
 
 // ENDPOINT para CADASTRAR
-gameRoutes.post("/games", gameController.createGame);x
+gameRoutes.post("/games", gameController.createGame);
+
+// ENDPOINT para DELETAR
+gameRoutes.delete("/games/:id", gameController.deleteGame);
+
+// ENDPOINT para ALTERAR
+gameRoutes.put("/games/:id", gameController.updateGame);
+
+// ENDPOINR para LISTAR um ÚNICO jogo
+gameRoutes.get("/games/:id", gameController.getOneGame);
 
 export default gameRoutes;

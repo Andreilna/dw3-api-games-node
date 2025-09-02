@@ -27,6 +27,42 @@ class gameService {
       console.log(error);
     }
   }
+
+  // Deletando registros no banco
+  async Delete(id) {
+    try {
+      await Game.findByIdAndDelete(id);
+      console.log(`Game com a id: ${id} foi deletado com sucesso.`);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  // Alterando registros no banco
+  async Update(id, title, year, genre, platform, price) {
+    try {
+      await Game.findByIdAndUpdate(id, {
+        title,
+        year,
+        genre,
+        platform,
+        price,
+      });
+      console.log(`Dados do game com id ${id} alterados com sucesso.`);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  // Listando um registro único
+  async getOne(id) {
+    try {
+      const game = await Game.findOne({ _id: id });
+      return game;
+    } catch (error) {
+      console.log(error);
+    }
+  }
 }
 
 export default new gameService();
