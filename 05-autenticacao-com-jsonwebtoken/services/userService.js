@@ -15,6 +15,15 @@ class userService {
       console.log(error);
     }
   }
+  // Método para BUSCAR um usuário
+  async getOne(email) {
+    try {
+      const user = await User.findOne({ email: email });
+      return user;
+    } catch (error) {
+      console.log(error);
+    }
+  }
 }
 
 export default new userService();
