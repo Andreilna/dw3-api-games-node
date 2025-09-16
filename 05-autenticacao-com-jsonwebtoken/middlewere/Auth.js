@@ -3,7 +3,7 @@ import userController from "../controllers/userController.js";
 
 // Fubção de autenticação para verificar se o usuário está enviando o token e se ele é válido
 const Authorization = (req, res, next) => {
-  const authToken = req.headers["authorization"];
+  const authToken = req.headers["authorization"]; 
   if (authToken != undefined) {
     // Divdindo a string do token para eliminar o Bearer
     const bearer = authToken.split(" ");
