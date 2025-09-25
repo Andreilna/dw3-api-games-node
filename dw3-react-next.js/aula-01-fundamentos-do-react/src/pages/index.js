@@ -4,6 +4,8 @@ import Welcome from "@/components/Welcome";
 import User from "@/components/User";
 import Description from "@/components/Description";
 import Pet from "@/components/Pet";
+import Counter from "@/components/Counter";
+import UserForm from "@/components/UserForm";
 
 export default function Home() {
   return (
@@ -22,12 +24,17 @@ export default function Home() {
         <User />
         <hr /><br />
         <Description
-          city="Pariquera-açu"
-          age={18}
-          email="marceloyogo37@gmail.com"
+          city="Registro"
+          age={19}
+          email="andreialda7@gmail.com"
         />
         <br />
-        <Pet name="Noah" breed="Netherland Dwarf" age={3} />
+        <Pet name="Lola" breed="Pincher" age={4} />
+        <br />
+        <Counter />
+        <br />
+        <UserForm />
+        <br />  
       </main>
     </>
   );

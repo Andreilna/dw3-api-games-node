@@ -2,7 +2,7 @@
 
 const User = () => {
   // criando variaveis para o componete
-  const name = "Marcelo Augusto";
+  const name = "Andrei Lucas";
   return (
     <>
     {/* esse é o comenteari0o em jsx */}
