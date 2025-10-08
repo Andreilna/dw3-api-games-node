@@ -6,6 +6,9 @@ import Description from "@/components/Description";
 import Pet from "@/components/Pet";
 import Counter from "@/components/Counter";
 import UserForm from "@/components/UserForm";
+import ComponentePai from "@/components/ComponentePai";
+import Children from "@/components/Children";
+import TaskList from "@/components/TaskList";
 
 export default function Home() {
   return (
@@ -35,6 +38,40 @@ export default function Home() {
         <br />
         <UserForm />
         <br />  
+        <br />  
+        <ComponentePai />
+        <br />
+        <br />
+        <Children>
+          <div>
+            <p>Este é o conteúdo filho passado para o componente Children.</p>
+          </div>  
+        </Children>
+        <br />
+        <br />
+        <TaskList 
+        tasks={ [
+          {
+            id: "1",
+            text: "Pagar contas",
+          },
+          {
+            id: "2",
+            text: "Fazer compras no mercado",
+          },
+          {
+            id: "3",
+            text: "Lavar o carro",
+          },
+          {
+            id: "4",
+            text: "Estudar React",
+          },
+        ]}
+        />
+        <br />
+        <br />
+      
       </main>
     </>
   );
