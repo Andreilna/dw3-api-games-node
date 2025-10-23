@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import Games from "./models/Games.js"
 import User from "./models/Users.js"
 
-// Importando o CORS(O CORS permite requisições de outro domínio)
+// Importando o CORS (O CORS permite requisições de outro domínio)
 import cors from "cors"
 
 const app = express();
